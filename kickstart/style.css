@@ -1,0 +1,245 @@
+/*---------------------------------
+	IMPORTS
+-----------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
+
+/*---------------------------------
+	OVERRIDES
+-----------------------------------*/
+h1,h2,h3,h4,h5,h6{
+	font-family: "Trebuchet Ms", arial, verdana, sans-serif;
+}
+
+thead th,
+tbody th{
+	font-family: "Trebuchet Ms", arial, verdana, sans-serif;
+}
+
+button,
+a.btn,
+input[type="submit"],
+input[type="reset"],
+input[type="button"]{
+	font-family: "Trebuchet Ms", arial, verdana, sans-serif;
+}
+
+.menu{
+	font-family: "Trebuchet Ms", arial, verdana, sans-serif;
+}
+
+blockquote{
+	font-family: "Trebuchet Ms", arial, verdana, sans-serif;
+}
+
+/*---------------------------------
+	LAYOUT
+-----------------------------------*/
+body {
+	margin:0;
+	padding:0;
+	color:#000;
+	background:#efefef url(img/bg.jpg) repeat center top;
+	font:normal 0.9em/150% 'Arimo', "Trebuchet MS", arial, verdana, sans-serif;
+	text-shadow: 0 0 1px transparent; /* google font pixelation fix */
+}
+
+.wrap {
+	width:960px;/*960*/
+	background:#fff;
+	margin:30px auto 30px auto;
+	padding:0;
+	border:1px solid #ccc;
+}
+
+.popup {
+	width: 700px;
+}
+
+.logobar {
+	padding-left: 10px;
+}
+
+.logo {
+	margin-bottom: -30px;
+	color: #1D6DC1;
+}
+
+#nav {
+	position:relative;
+}
+
+#nav input {
+	position: absolute;
+	top: 20%;
+	right: 10px;
+	left: auto;
+	z-index: 700;
+	width: 200px;
+}
+
+.menu {
+	margin:-1px -1px 0 -1px;
+}
+
+footer {
+	text-align:center;
+	padding:20px;
+	margin:0;
+	background:#efefef;
+	border-top:1px solid #ccc;
+	color:#999;
+	font-size:0.8em;
+	text-shadow:0 1px 1px #fff;
+	position: relative;
+	top:0;
+	left:0;
+}
+
+.link-top {
+	position: absolute;
+	top:10px;
+	right:10px;
+	*right:25px;/*IE 7 ONLY*/
+	left:auto;
+	color:#666;
+	text-decoration:none;
+	display: inline-block;
+	padding:5px 10px;
+	background:#e5e5e5;
+	line-height:100%;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+
+.small {
+	font-size: x-small;
+}
+
+.tags a {
+	font-size: small;
+	background-color: #eee;
+	padding: 2px 7px 2px 7px;
+}
+
+.compact {
+	position: relative;
+}
+
+.compact .breadcrumbs {
+	margin: 0;
+	padding: 0;
+}
+
+.compact .right {
+	position: absolute;
+	top: 20%;
+	right: 10px;
+	left: auto;
+	z-index: 700;
+}
+
+.sidebar ul {
+	margin: 0 0 5px 25px;
+}
+
+.tag_cloud {
+	text-align: left;
+	margin: 0;
+}
+
+/*---------------------------------
+	FORMS
+-----------------------------------*/
+
+fieldset .column .inner {
+	padding: 0;
+}
+
+#search-sq {
+	width: 400px;
+	height: 36px;
+}
+
+#tags-sq {
+	width: 340px;
+	height: 36px;
+}
+
+/*---------------------------------
+	Polls (copied from esclkm's Priori)
+-----------------------------------*/
+.bar_back {
+	background: #E2E2E2;
+	background: linear-gradient(#E2E2E2, #D8D8D8) repeat scroll 0 0 transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E2E2E2', endColorstr='#D8D8D8'); /* IE6-9 */
+	background: -webkit-linear-gradient(top, bottom, #E2E2E2, #D8D8D8); /* webkit */
+	background: -moz-linear-gradient(top,  #E2E2E2,  #D8D8D8); /* irefox 3.6+ */
+	background: -o-linear-gradient(top,  #E2E2E2,  #D8D8D8); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #E2E2E2,  #D8D8D8); /* IE10+ */
+    border-radius: 3px 3px 3px 3px;
+    height: 13px;
+    margin-left: 3px;
+    position: relative;
+	/*box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);*/
+	border: 1px solid #d4d4d4;
+}
+.bar_front {
+	background: #8DCF16;
+	background: linear-gradient(#8DCF16, #65BD10) repeat scroll 0 0 transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8DCF16', endColorstr='#65BD10'); /* IE6-9 */
+	background: -webkit-linear-gradient(top, bottom, #8DCF16, #65BD10); /* webkit */
+	background: -moz-linear-gradient(top,  #8DCF16,  #65BD10); /* firefox 3.6+ */
+	background: -o-linear-gradient(top,  #8DCF16,  #65BD10); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #8DCF16,  #65BD10); /* IE10+ */
+
+	/*   background: -moz-linear-gradient(#3e6c96, #5f93c3) repeat scroll 0 0 transparent;*/
+	border-radius: 3px 3px 3px 3px;
+    height: 13px;
+}
+.bar_back:hover .bar_front {
+	background: #69d344;
+	background: linear-gradient(#69d344, #4c8b36) repeat scroll 0 0 transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#69d344', endColorstr='#4c8b36'); /* IE6-9 */
+	background: -webkit-linear-gradient(top, bottom, #69d344, #4c8b36); /* webkit */
+	background: -moz-linear-gradient(top,  #69d344,  #4c8b36); /* firefox 3.6+ */
+	background: -o-linear-gradient(top,  #69d344,  #4c8b36); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #69d344,  #4c8b36); /* IE10+ */
+}
+
+/*---------------------------------
+	PAGINATION
+-----------------------------------*/
+
+.pagination {
+	text-align:right;
+	margin:3px 0 0 0;
+	padding:0;
+}
+
+.pagination span {
+	display:inline;
+	position:relative;
+	top:0;
+	left:0;
+	line-height:100%;
+	margin:0;
+	padding:0;
+}
+
+.pagination span.pagenav_current a {
+	background:#ddd;
+}
+		
+.pagination a {
+	display:inline;
+	position:relative;
+	top:0;
+	left:0;
+	padding:1px 3px;
+	margin:0 1px;
+	line-height:100%;
+	border:1px solid #efefef;
+	text-decoration:none;
+	font-size:0.8em;
+}
