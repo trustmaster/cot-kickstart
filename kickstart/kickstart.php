@@ -33,56 +33,61 @@ $R['breadcrumbs_crumb'] = '<li>{$crumb}</li>';
 $R['breadcrumbs_first'] = '<li>{$crumb}</li>';
 $R['breadcrumbs_last'] = '<li>{$crumb}</li>';
 
-/*
- * Helper functions
- */
-
-/**
- * Inserts or modifies tag attribute
- * @param  string $tag   HTML/TPL tag
- * @param  string $attr  Attribute name
- * @param  string $value Attribute value
- * @return string        HTML with the attribute inserted/modified
- */
-function kick_attr($tag, $attr, $value)
+if (!defined('KICKSTART_HELPERS'))
 {
-	if (preg_match('#'.$attr.'="(.*?)"#', $tag, $m))
-	{
-		return str_replace($m[0], $attr.'="'.$value.'"', $tag);
-	}	
-	else
-	{
-		return preg_replace('#(/?>)#', ' '.$attr.'="'.$value.'" $1', $tag, 1);
-	}
-}
+	define('KICKSTART_HELPERS', true);
 
-/**
- * Inserts/updates class attribute of the tag
- * @param  string $tag   HTML/TPL tag
- * @param  string $class Class or classes space separated
- * @return string        HTML with class attribute inserted/modified
- */
-function kick_class($tag, $class)
-{
-	if (preg_match('#class="(.*?)"#', $tag, $m))
-	{
-		return str_replace($m[0], 'class="'.$m[1].' '.$class.'"', $tag);
-	}
-	else
-	{
-		return preg_replace('#(/?>)#', ' class="'.$class.'" $1', $tag, 1);
-	}
-}
+	/*
+	 * Helper functions
+	 */
 
-/**
- * Inserts an ID attribute into the tag
- * @param  string $tag HTML/TPL tag
- * @param  string $id  DOM ID
- * @return string      HTML with id attribute inserted
- */
-function kick_id($tag, $id)
-{
-	return kick_attr($tag, 'id', $id);
+	/**
+	 * Inserts or modifies tag attribute
+	 * @param  string $tag   HTML/TPL tag
+	 * @param  string $attr  Attribute name
+	 * @param  string $value Attribute value
+	 * @return string        HTML with the attribute inserted/modified
+	 */
+	function kick_attr($tag, $attr, $value)
+	{
+		if (preg_match('#'.$attr.'="(.*?)"#', $tag, $m))
+		{
+			return str_replace($m[0], $attr.'="'.$value.'"', $tag);
+		}	
+		else
+		{
+			return preg_replace('#(/?>)#', ' '.$attr.'="'.$value.'" $1', $tag, 1);
+		}
+	}
+
+	/**
+	 * Inserts/updates class attribute of the tag
+	 * @param  string $tag   HTML/TPL tag
+	 * @param  string $class Class or classes space separated
+	 * @return string        HTML with class attribute inserted/modified
+	 */
+	function kick_class($tag, $class)
+	{
+		if (preg_match('#class="(.*?)"#', $tag, $m))
+		{
+			return str_replace($m[0], 'class="'.$m[1].' '.$class.'"', $tag);
+		}
+		else
+		{
+			return preg_replace('#(/?>)#', ' class="'.$class.'" $1', $tag, 1);
+		}
+	}
+
+	/**
+	 * Inserts an ID attribute into the tag
+	 * @param  string $tag HTML/TPL tag
+	 * @param  string $id  DOM ID
+	 * @return string      HTML with id attribute inserted
+	 */
+	function kick_id($tag, $id)
+	{
+		return kick_attr($tag, 'id', $id);
+	}
 }
 
 ?>
