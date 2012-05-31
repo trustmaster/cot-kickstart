@@ -66,6 +66,7 @@
 				</tbody>
 			</table>
 			<p class="pagination">{PFF_PAGING_PREV}{PFF_PAGING_CURRENT}{PFF_PAGING_NEXT}</p>
+			<hr />
 
 			<h4>{PFS_FILESCOUNT} {PHP.L.Files} {PFS_INTHISFOLDER} ({PHP.L.pfs_onpage}: {PFS_ONPAGE_FILES} {PHP.L.Files}) {PFS_SHOWTHUMBS}</h4>
 			<table>
@@ -101,6 +102,7 @@
 				</tbody>
 			</table>
 			<p class="pagination">{PFS_PAGING_PREV}{PFS_PAGING_CURRENT}{PFS_PAGING_NEXT}</p>
+			<hr />
 
 			<div style="padding:10px 20px; border:2px dashed red">
 				<p>{PHP.L.pfs_totalsize}: {PFS_TOTALSIZE} {PHP.L.Of} {PFS_MAXTOTAL} ({PFS_PERCENTAGE}%)</p>
@@ -110,52 +112,60 @@
 				<p>{PHP.L.pfs_maxsize}: {PFS_MAXFILESIZE}</p>
 			</div>
 
-			<h4>{PHP.L.pfs_newfile}</h4>
 			<!-- BEGIN: PFS_UPLOAD_FORM -->
 			<form enctype="multipart/form-data" action="{PFS_UPLOAD_FORM_ACTION}" method="post">
-				<input type="hidden" name="MAX_FILE_SIZE" value="{PFS_UPLOAD_FORM_MAX_SIZE}" />
-				<div class="col_4"><label>{PHP.L.Folder}:</label></div>	<div class="col_8">{PFS_UPLOAD_FORM_FOLDERS}</div>
-				<table>
-					<thead>
-						<tr>
-							<th>&nbsp;</th>
-							<th>{PHP.L.Description}</th>
-							<th>{PHP.L.File}</th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- BEGIN: PFS_UPLOAD_FORM_ROW -->
-						<tr>
-							<td style="text-align:center">#{PFS_UPLOAD_FORM_ROW_NUM}</td>
-							<td><input type="text" class="text" name="ndesc[{PFS_UPLOAD_FORM_ROW_ID}]" value="" size="40" maxlength="255" /></td>
-							<td><input name="userfile[{PFS_UPLOAD_FORM_ROW_ID}]" type="file" class="file" size="24" /></td>
-						</tr>
-						<!-- END: PFS_UPLOAD_FORM_ROW -->
-					</tbody>
-					<tfoot>
-						<tr>
-							<td colspan="3" class="valid">
-								<button type="submit">{PHP.L.Upload}</button>
-							</td>
-						</tr>
-					</tfoot>
-				</table>
+				<fieldset>
+					<legend>{PHP.L.pfs_newfile}</legend>
+					<input type="hidden" name="MAX_FILE_SIZE" value="{PFS_UPLOAD_FORM_MAX_SIZE}" />
+					<div class="col_4"><label>{PHP.L.Folder}:</label></div>	<div class="col_8">{PFS_UPLOAD_FORM_FOLDERS}</div>
+					<br class="clear" />
+					<table>
+						<thead>
+							<tr>
+								<th>&nbsp;</th>
+								<th>{PHP.L.Description}</th>
+								<th>{PHP.L.File}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- BEGIN: PFS_UPLOAD_FORM_ROW -->
+							<tr>
+								<td style="text-align:center">#{PFS_UPLOAD_FORM_ROW_NUM}</td>
+								<td><input type="text" class="text" name="ndesc[{PFS_UPLOAD_FORM_ROW_ID}]" value="" size="40" maxlength="255" /></td>
+								<td><input name="userfile[{PFS_UPLOAD_FORM_ROW_ID}]" type="file" class="file" size="24" /></td>
+							</tr>
+							<!-- END: PFS_UPLOAD_FORM_ROW -->
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="3" class="valid">
+									<button type="submit">{PHP.L.Upload}</button>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</fieldset>
 			</form>
+			<hr />
 			<!-- END: PFS_UPLOAD_FORM -->
 
 			<!-- BEGIN: PFS_NEWFOLDER_FORM -->
-			<h4>{PHP.L.pfs_newfolder}</h4>
 			<form id="newfolder" action="{NEWFOLDER_FORM_ACTION}" method="post">
-				<label class="col_4">{PHP.L.Title}:</label>			<input type="text" class="text col_8" name="ntitle" value="" size="32" maxlength="64" />
-				<label class="col_4">{PHP.L.Description}:</label>	<input type="text" class="text col_8" name="ndesc" value="" size="32" maxlength="255" />
-				<div class="col_4"><label>{PHP.L.pfs_ispublic}</label></div>	<div class="col_8"><input type="radio" class="radio" name="nispublic" value="1" />{PHP.L.Yes} 
-							<input type="radio" class="radio" name="nispublic" value="0" checked="checked" />{PHP.L.No}</div>
-				<div class="col_4"><label>{PHP.L.pfs_isgallery}</label></div>	<div class="col_8"><input type="radio" class="radio" name="nisgallery" value="1" />{PHP.L.Yes} 
-							<input type="radio" class="radio" name="nisgallery" value="0" checked="checked" />{PHP.L.No}</div>
-				<div class="col_12 center clearfix">
-					<input type="submit" class="submit" value="{PHP.L.Create}" />
-				</div>
+				<fieldset>
+					<legend>{PHP.L.pfs_newfolder}</legend>
+					<div class="col_4"><label>{PHP.L.Title}:</label></div>			<div class="col_8"><input type="text" class="text col_8" name="ntitle" value="" size="32" maxlength="64" /></div>
+					<div class="col_4"><label>{PHP.L.Description}:</label></div>	<div class="col_8"><input type="text" class="text col_8" name="ndesc" value="" size="32" maxlength="255" /></div>
+					<div class="col_4"><label>{PHP.L.pfs_ispublic}</label></div>	<div class="col_8"><input type="radio" class="radio" name="nispublic" value="1" />{PHP.L.Yes}
+								<input type="radio" class="radio" name="nispublic" value="0" checked="checked" />{PHP.L.No}</div>
+					<br class="clear" />
+					<div class="col_4"><label>{PHP.L.pfs_isgallery}</label></div>	<div class="col_8"><input type="radio" class="radio" name="nisgallery" value="1" />{PHP.L.Yes}
+								<input type="radio" class="radio" name="nisgallery" value="0" checked="checked" />{PHP.L.No}</div>
+					<div class="col_12 center clearfix">
+						<input type="submit" class="submit" value="{PHP.L.Create}" />
+					</div>
+				</fieldset>
 			</form>
+			<hr />
 		<!-- END: PFS_NEWFOLDER_FORM -->
 
 			<h4>{PHP.L.pfs_extallowed}</h4>
@@ -168,8 +178,8 @@
 	</div>
 <!-- BEGIN: STANDALONE_FOOTER -->
 	<div class="col_12">
-		{PHP.R.pfs_icon_pastethumb} {PHP.L.pfs_pastethumb} &nbsp; 
-		{PHP.R.pfs_icon_pasteimage} {PHP.L.pfs_pasteimage} &nbsp; 
+		{PHP.R.pfs_icon_pastethumb} {PHP.L.pfs_pastethumb} &nbsp;
+		{PHP.R.pfs_icon_pasteimage} {PHP.L.pfs_pasteimage} &nbsp;
 		{PHP.R.pfs_icon_pastefile} {PHP.L.pfs_pastefile}
 	</div>
 
