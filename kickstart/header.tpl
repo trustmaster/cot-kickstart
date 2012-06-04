@@ -40,7 +40,7 @@
 						<!-- ENDIF -->
 						<li <!-- IF {PHP.env.ext} == 'users' AND {PHP.m} == 'profile' -->class="current"<!--ENDIF -->><a href="{PHP|cot_url('users','m=profile')}"><span class="icon" data-icon="z"></span>{PHP.L.kick_profile}</a></li>
 						<li <!-- IF {PHP.env.ext} == 'elfinder' -->class="current"<!--ENDIF -->><a href="{PHP|cot_url('plug', 'e=elfinder')}"><span class="icon" data-icon=","></span>{PHP.L.kick_myfiles}</a></li>
-						<li><a href="{PHP|cot_url('login', 'out=1')}"><span class="icon" data-icon="Q"></span>{PHP.L.Logout}</a></li>
+						<li><a href="{PHP.sys.xk|cot_url('login', 'out=1&x=$this')}"><span class="icon" data-icon="Q"></span>{PHP.L.Logout}</a></li>
 						<!-- ELSE -->
 						<li <!-- IF {PHP.env.ext} == 'login' -->class="current"<!--ENDIF -->><a href="{PHP|cot_url('login')}"><span class="icon" data-icon="O"></span>{PHP.L.kick_login}</a></li>
 						<li <!-- IF {PHP.env.ext} == 'users' AND {PHP.m} == 'register' -->class="current"<!--ENDIF -->><a href="{PHP|cot_url('users','m=register')}"><span class="icon" data-icon="v"></span>{PHP.L.kick_register}</a></li>
