@@ -8,9 +8,9 @@
 </div>
 
 <div class="col_4 sidebar">
-	<!-- IF {INDEX_PAGEARCHIVE} -->
+	<!-- IF {PHP|cot_plugin_active('pagearchive')} -->
 	<h3>{PHP.L.kick_archive}</h3>
-	{INDEX_PAGEARCHIVE}
+	{PHP|pagearchive}
 	<hr />
 	<!-- ENDIF -->
 	<!-- IF {INDEX_POLLS} -->
