@@ -35,7 +35,7 @@
 					<ul>
 						<!-- IF {PHP.usr.id} > 0 -->
 						<!-- IF {PHP.usr.isadmin} -->
-						<li><a href="{PHP|cot_url('admin')}"><span class="icon" data-icon="g"></span>{PHP.L.kick_admin}</a></li>
+						<li><a href="{PHP|cot_url('admin', '', '', 0, 1)}"><span class="icon" data-icon="g"></span>{PHP.L.kick_admin}</a></li>
 						<li <!-- IF {PHP.env.ext} == 'users' AND {PHP.m} == 'main' -->class="current"<!--ENDIF -->><a href="{PHP|cot_url('users')}"><span class="icon" data-icon="U"></span>{PHP.L.Users}</a></li>
 						<!-- ENDIF -->
 						<li <!-- IF {PHP.env.ext} == 'users' AND {PHP.m} == 'profile' -->class="current"<!--ENDIF -->><a href="{PHP|cot_url('users','m=profile')}"><span class="icon" data-icon="z"></span>{PHP.L.kick_profile}</a></li>
