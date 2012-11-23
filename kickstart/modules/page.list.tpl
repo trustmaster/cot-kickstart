@@ -16,7 +16,7 @@
 
 	<!-- BEGIN: LIST_ROW -->
 	<h3>{LIST_ROW_SHORTTITLE}</h3>
-	<!-- IF {PAGE_ROW_DESC} -->
+	<!-- IF {LIST_ROW_DESC} -->
 	<p class="small">
 		{LIST_ROW_DESC}
 	</p>
