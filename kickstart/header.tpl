@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>{HEADER_TITLE}</title> 
+<title>{HEADER_TITLE}</title>
 <!-- IF {HEADER_META_DESCRIPTION} --><meta name="description" content="{HEADER_META_DESCRIPTION}" /><!-- ENDIF -->
 <!-- IF {HEADER_META_KEYWORDS} --><meta name="keywords" content="{HEADER_META_KEYWORDS}" /><!-- ENDIF -->
 <meta http-equiv="content-type" content="{HEADER_META_CONTENTTYPE}; charset=UTF-8" />
@@ -49,7 +49,7 @@
 				</li>
 				<li><a href="{PHP|cot_url('rss')}"><span class="icon social" data-icon="R"></span>RSS</a></li>
 			</ul>
-			<form id="search" name="search" action="{PHP|cot_url('plug','e=search')}" method="get">
+			<form id="search" name="search" action="{PHP|cot_url('plug','e=search')}" method="post">
 				<input type="text" id="searchq" name="sq" placeholder="{PHP.L.Search}" />
 			</form>
 		</div>
